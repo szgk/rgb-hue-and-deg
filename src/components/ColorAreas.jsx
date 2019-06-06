@@ -39,7 +39,6 @@ export default class App extends React.Component {
 			const areaInfoXdiff = i === 0 ? 10 : 0 < i && i < 180 ? 10 : 0
 			const x = half + (radius + infoScale) * areaCosign + areaInfoXdiff
 			const y = half - (radius + infoScale) * areaSsign + areaInfoYdiff
-			console.log(360 - i, getColorNme(360 - i))
 			const colorName = getColorNme(360 - i)
 			const areaInfoParams =  {
 				key: `area_info_${i}`,

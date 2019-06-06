@@ -14,7 +14,7 @@ export default class App extends React.Component {
 			loopFunc: null,
 			degs,
 			view: 700,
-			viewHeight: 550,
+			viewHeight: 700,
 			radius: 100,
 			displayAreas: true,
 			displayInfos: true,
@@ -45,10 +45,10 @@ export default class App extends React.Component {
 
 	stop() {
 		clearTimeout(this.state.loopFunc)
+		this.state.loopFunc = null
 	}
 
 	changeDisplayInfos() {
-		console.log(this.state.displayInfos)
 		this.setState(() => ({
 			...this.state,
 			displayInfos: !this.state.displayInfos,
@@ -56,7 +56,6 @@ export default class App extends React.Component {
 	}
 
 	changeDisplayAreas() {
-		console.log(this.state.displayAreas)
 		this.setState(() => ({
 			...this.state,
 			displayAreas: !this.state.displayAreas,

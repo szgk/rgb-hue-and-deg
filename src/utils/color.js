@@ -9,6 +9,7 @@ const NAMES = {
 	BG: 'Blue Green',
 	B: 'Blue',
 	DB: 'Dark Blue',
+	DeB: 'Deep Blue',
 	BV: 'Blue Violet',
 	V: 'Violet',
 	RV: 'Red Violet',
@@ -21,7 +22,6 @@ export function getHueFromRgb(rgb) {
 
 	const max = Math.max.apply(null, rgb)
 	const min = Math.min.apply(null, rgb)
-	console.log(r,g,b,min,max)
 
 	if(min === max) {return 0}
 	if(r === max) {return (g - r) / max - min}
@@ -89,7 +89,7 @@ export function getColorNme(hue) {
 		return NAMES.DB
 	}
 	else if (240 < hue && hue <= 270) {
-		return NAMES.BV
+		return NAMES.DeB
 	}
 	else if (270 < hue && hue <= 300) {
 		return NAMES.BV
